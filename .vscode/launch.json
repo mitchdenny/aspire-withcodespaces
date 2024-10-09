@@ -1,11 +1,12 @@
 {
     "configurations": [
+
         {
-            "name": "C#: CustomResources.AppHost [http]",
+            "name": "C#: CustomResources.AppHost [https]",
             "type": "dotnet",
             "request": "launch",
             "projectPath": "${workspaceFolder}/CustomResources.AppHost/CustomResources.AppHost.csproj",
-            "launchConfigurationId": "TargetFramework=;http"
+            "launchConfigurationId": "TargetFramework=;https"
         }
     ]
 }

@@ -19,7 +19,16 @@
 	},
 
 	"containerEnv": {
-		"ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true"
+		"ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
+		"DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS ": "true"
+	},
+	"portsAttributes": {
+		"15099": {
+			"label": "Dashboard HTTP"
+		},
+		"17245": {
+			"label": "Dashboard HTTPS"
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
