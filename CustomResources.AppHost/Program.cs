@@ -6,7 +6,11 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = DistributedApplication.CreateBuilder(args).WithCodespaces();
 
-var db = builder.AddPostgres("pg").AddDatabase("db");
+var db = builder.AddPostgres("pg").WithPgAdmin(c => {
+    c.WithEnvironment("PGADMIN_CONFIG_WTF_CSRF_ENABLED", "False");
+    c.WithEnvironment("PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION", "False");
+    c.WithHostPort(39999);
+}).AddDatabase("db");
 
 var apiService = builder.AddProject<Projects.CustomResources_ApiService>("apiservice")
                         .WithReference(db);

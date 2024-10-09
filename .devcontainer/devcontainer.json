@@ -23,11 +23,29 @@
 		"DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS ": "true"
 	},
 	"portsAttributes": {
+		"7105": {
+			"label": "Web Frontend HTTPS"
+		},
+		"7426": {
+			"label": "API Service HTTPS"
+		},
 		"15099": {
 			"label": "Dashboard HTTP"
 		},
 		"17245": {
 			"label": "Dashboard HTTPS"
+		},
+		"36075": {
+			"label": "PGWeb HTTP"
+		},
+		"39999": {
+			"label": "PGAdmin"
+		},
+		"41829": {
+			"label": "RedisInsight (HTTP)"
+		},
+		"45297": {
+			"label": "PGAdmin HTTP"
 		}
 	}
 

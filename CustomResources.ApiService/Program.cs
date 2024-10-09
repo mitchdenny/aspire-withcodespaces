@@ -5,8 +5,18 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+builder.Services.AddHttpLogging(configure => {
+    configure.RequestHeaders.Add("x-forwarded-proto");
+    configure.RequestHeaders.Add("x-forwarded-host");
+    configure.RequestHeaders.Add("x-forwarded-for");
+    configure.RequestHeaders.Add("x-forwarded-scheme");
+    configure.RequestHeaders.Add("x-forwarded-port");
+});
+
 
 var app = builder.Build();
+
+app.UseHttpLogging();
 
 // Configure the HTTP request pipeline.
 app.UseExceptionHandler();
